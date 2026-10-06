@@ -1,0 +1,23 @@
+name: Site checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tests/data-validation.test.js
+      - run: node tests/navigation.test.js
+      - run: node tests/worksheets.test.js
+      - run: node tests/accessibility.test.js
+      - run: node tests/support.test.js
+      - name: Reject obvious secret-like files
+        run: |
+          if find . -type f \( -name '*.pem' -o -name '*.key' -o -name '.env' \) -not -path './.git/*' | grep -q .; then
+            echo 'Potential secret file found'; exit 1;
+          fi
