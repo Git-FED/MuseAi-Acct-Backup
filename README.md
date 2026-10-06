@@ -1,5 +1,7 @@
 # AI Agent Lockout Backup Kit
 
+<img width="679" height="805" alt="Screenshot 2026-10-06 024015" src="https://github.com/user-attachments/assets/6f2aaaeb-66bc-4c49-8bec-e4b479856f89" />
+
 A vendor-independent continuity kit for backing up, rotating, and recovering information used by AI agents—without storing secrets in the agent or in GitHub.
 
 > **Core principle:** If an AI agent becomes unavailable, the business owner must still have independent access to every credential, configuration, document, and recovery procedure needed to continue operating.
