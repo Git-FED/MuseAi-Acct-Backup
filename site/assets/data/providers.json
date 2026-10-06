@@ -1,0 +1,10 @@
+[
+  {
+    "id": "generic-provider",
+    "name": "Provider-neutral workflow",
+    "status": "verified",
+    "description": "Use the issuing provider's documented recovery, export, audit, and credential-rotation paths. Provider-specific menus vary.",
+    "source_url": "https://www.cisa.gov/stopransomware/ransomware-guide",
+    "last_verified": "2026-10-05"
+  }
+]

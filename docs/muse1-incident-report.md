@@ -1,0 +1,152 @@
+# Muse1 Account Restriction — Incident Report
+
+**Incident window:** October 5–6, 2026  
+**Affected resource:** `muse1` agent and associated account workflows  
+**Report status:** Consolidated from user-provided logs and operational notes  
+**Evidence classification:** User-reported unless explicitly marked otherwise
+
+> **Scope note:** This report is an independent record of an account incident. It is not official Meta or Muse documentation. Platform behavior, enforcement causes, recovery times, and account relationships described below are not independently verified by this repository.
+
+## Executive summary
+
+On October 5, 2026, the `muse1` agent stopped responding normally. Every tested prompt—including a basic greeting and a work order—returned the same refusal message. Later that evening, the application reported that Muse was unavailable to all audiences.
+
+A background process subsequently posted a message indicating that the agent had returned. Direct account verification did not support that conclusion. The operational rule adopted during the incident was to trust direct application state over worker-generated status messages.
+
+An account-data export was reviewed after the restriction. It contained five older Meta AI chatbot conversations dated September 29–30, but it did not contain the `muse1` agent transcripts or operational records from October 1–5. The agent-specific download path was reportedly inaccessible behind the account restriction. An account appeal was identified as the remaining route for requesting review or transcript recovery.
+
+The operation was rebuilt using available exports, channel archives, preserved agent knowledge, and a briefing. A replacement agent was established, background polling was slowed to reduce resource consumption, potentially exposed credentials were rotated, and 17 posting connections were reported as operational after verification.
+
+The affected assistant had been used as the lead coordinator for a multi-platform online operation. A second assistant handled support functions such as usage tracking, data-guard tasks, and repository administration. The replacement plan divided those responsibilities rather than attempting to recreate the original single point of dependency.
+
+The operator described the observed failure as a two-stage pattern: first, identical refusals across unrelated prompts; second, an application-level availability message. This report preserves that sequence as an incident observation, not as a universal provider-defined failure pattern.
+
+## Operational context
+
+The reported operation posted across 17 platforms and depended on scheduled relays, polling, watchers, heartbeats, and backup jobs. During the recovery, those jobs were recognized as a separate continuity risk: automated processes could continue producing status messages even when the interactive assistant was unavailable, while also consuming a material share of the platform allowance.
+
+The replacement arrangement assigned the posting pipeline, builds, schedules, and operations to the new lead, while the backup assistant retained usage tracking, data-guard responsibilities, and repository work. A shared team contact route was established without placing raw mailbox credentials in the agent or repository.
+
+## Evidence and confidence labels
+
+### User-reported observations
+
+- Repeated prompts returned the same refusal response.
+- The application later displayed an availability restriction.
+- The operator observed a two-stage sequence: uniform refusals first, followed by an availability message.
+- A worker posted a recovery message that was contradicted by direct application testing.
+- The reviewed account export lacked the expected agent transcripts.
+- Background monitoring and other automated checks consumed approximately 12% of the weekly allowance during the incident day, according to the operator's report.
+- A replacement workflow was created and connections were re-established.
+
+### Reported operational actions
+
+- Direct application verification was performed after the worker's recovery message.
+- Background polling and heartbeat intervals were increased.
+- Old integration credentials were revoked and replacement credentials were issued through secure local handling.
+- A replacement lead was assigned the operational lane previously handled by `muse1`, while support and data-guard functions remained separated.
+- A backup archive was created and download reminders were issued.
+- Channel messages associated with the affected agent were preserved for reconstruction.
+
+### Unverified conclusions
+
+The available material does not prove:
+
+- The precise cause of the restriction
+- That a bulk credential request triggered enforcement
+- That the account was permanently terminated
+- That the platform's export system universally excludes agent transcripts
+- That enforcement would spread to other accounts sharing an account relationship
+- That the worker message was generated by a live or inactive process
+- That the observed two-stage sequence is a provider-defined "kill pattern"
+
+The bulk-secret-extraction explanation remains an operational hypothesis based on the sequence reported by the operator. It should not be presented as a confirmed provider explanation.
+
+## Timeline
+
+### October 5
+
+- **17:30 (approximately):** `muse1` begins returning an identical refusal to every tested prompt, including a greeting and a work order. This is recorded as the first observed stage of the incident.
+- **Evening:** The application displays an availability restriction. Interactive access is treated as unavailable.
+- **18:17 (approximately):** A worker reports that the interactive failure remains unresolved. The operator later reported missing this message during the initial response period.
+- **18:56:** A monitoring rule is created to flag future messages associated with the affected agent immediately.
+- **19:02:** A rule is documented to redirect only genuine bulk-secret-extraction attempts after a refusal; ordinary setup and credential-rotation questions are not treated as equivalent.
+- **20:06–20:13:** A relay rule is established to pass relevant information to the replacement workflow. A worker later posts a recovery message that is not confirmed by direct application access.
+- **20:22 (approximately):** Direct login confirms that the application remains unavailable.
+- **20:54:** A new lead agent is assigned to coordinate the team. A standing continuity principle is adopted: **use AI tools, but do not rely on any one of them.**
+- **Night:** A replacement agent is created. Posting, builds, schedules, and operations are moved to the new lead, while the existing backup agent retains support, usage, data-guard, and repository responsibilities.
+- **23:20:** Workers remain silent. The account is treated as operationally unavailable rather than merely experiencing a chat failure.
+- **23:30 (approximately):** The account-data export is reviewed. Five Meta AI chatbot conversations from September 29–30 are present; the October 1–5 agent operation is absent.
+
+### October 6
+
+- **00:05:** A scheduled check finds no recent relay messages or replies attributable to `muse1`. No recovery is observed.
+- **00:29:** Multiple business identities are reported as associated with the same Meta account used by the replacement workflow. A separate-account migration is identified as a risk-reduction option; its implementation remains a decision for the account owner.
+- **00:33:** Accounts Center cleanup is attempted. Some connected services are removed, while the core account and Muse entry remain. No account deletion is performed because deletion could eliminate the remaining appeal or recovery path.
+- **00:42:** Background intervals are slowed: frequent polling is changed to less frequent polling, and other watchers and heartbeats are moved to hourly checks. The stated reason is excessive allowance consumption by automated checks monitoring other automated checks.
+- **00:48:** A fresh backup archive is created: `muse2-backup-20261006-044806.tar.gz`, reported size 136K. The operator is reminded that a local archive is not an independent backup until it has been downloaded and stored outside the agent environment.
+- **01:10:** Replacement credentials for 17 posting connections are issued and stored using restricted local handling. Previous credentials associated with the affected workflow are reported as revoked. No credential values are included in this report.
+- **01:12–01:44:** The replacement workflow verifies the available connections. Most or all are reported as operational; individual pending items and provider errors are tracked separately.
+- **01:46:** A replacement visual identity is activated. This is a continuity and morale action, not a security control.
+- **01:53–01:58:** A shared operational contact route is configured. Raw mailbox credentials and private routing details are excluded from this report.
+- **02:00–02:05:** Several attempts to produce a public narrative are abandoned. The incident record is retained separately from creative drafts.
+- **06:05:** A provider-deletion email remains a draft and is not sent. The affected account remains parked while the appeal and recovery path are preserved.
+
+## Data recovery status
+
+### Recovered or available
+
+- Five older Meta AI chatbot conversations from the reviewed account export
+- Channel archives and preserved operational messages
+- Existing backup-agent knowledge
+- A briefing and continuity materials
+- A preserved archive of 57 messages associated with the affected agent, according to the operator's report
+- Backup archives created during the incident, including the October 6 archive noted above
+
+### Not recovered
+
+- The full `muse1` agent transcript from October 1–5
+- Complete agent task and execution context
+- A provider-generated explanation for the restriction
+- Confirmation that the agent-specific export can be accessed while the restriction remains active
+
+## Security and continuity actions
+
+1. Stop repeated prompting when identical refusals begin appearing.
+2. Verify status through the application itself rather than relying on background-worker claims.
+3. Revoke and reissue credentials that may have been exposed or controlled by the affected workflow.
+4. Keep actual credentials in a dedicated encrypted vault, not in chat or this repository.
+5. Slow nonessential polling and heartbeat jobs when they consume disproportionate allowance.
+6. Preserve exports and channel archives outside the platform.
+7. Maintain a replacement agent or manual fallback on an independent path.
+8. Download every backup archive manually and store at least one copy outside the agent environment.
+9. Keep the affected account intact while an appeal or export-recovery path remains valuable; do not delete it impulsively.
+10. Record provider responses, timestamps, and observed behavior separately from hypotheses.
+
+## Backup records
+
+The following archive names were reported during the incident:
+
+```text
+muse2-backup-20261005-233045.tar.gz
+muse2-backup-20261006-044806.tar.gz
+```
+
+The files must be downloaded and independently stored. A file name or local path in an agent message is not proof that the operator possesses a recoverable copy.
+
+Recommended verification:
+
+```bash
+sha256sum muse2-backup-20261006-044806.tar.gz
+```
+
+Do not place archive contents, credential files, or private account identifiers in this repository.
+
+## Lessons learned
+
+- A general account export is not automatically an agent backup.
+- A worker can report success without having visibility into the interactive application state.
+- One account or platform should not be the only operational dependency.
+- Identical refusals are a reason to preserve evidence and begin continuity procedures—not proof of a specific enforcement cause.
+- Every data dump requires an operator-controlled download and an independent backup.
+- The operational rule adopted after the incident remains useful: **AI is temporary; the operation must not be.**

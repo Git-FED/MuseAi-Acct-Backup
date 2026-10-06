@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "observation",
+    "limitations",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "observation": {
+      "type": "string"
+    },
+    "limitations": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "observation",
+        "not-a-verdict"
+      ]
+    }
+  }
+}

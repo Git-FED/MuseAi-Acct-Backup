@@ -1,0 +1,20 @@
+[
+  {
+    "id": "secret-storage",
+    "question": "Should I store API keys in this website or repository?",
+    "answer": "No. Store actual secrets in a dedicated encrypted vault. This project records metadata and procedures only.",
+    "category": "Safety"
+  },
+  {
+    "id": "lockout-meaning",
+    "question": "Does an agent lockout prove that data was stolen?",
+    "answer": "No. A lockout is an observable access event. It does not by itself establish theft or credential compromise.",
+    "category": "Evidence"
+  },
+  {
+    "id": "recovery-time",
+    "question": "How long will recovery take?",
+    "answer": "Do not promise a time unless the provider documents one. Track elapsed time and follow official support or recovery procedures.",
+    "category": "Recovery"
+  }
+]

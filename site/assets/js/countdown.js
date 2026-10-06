@@ -1,0 +1,1 @@
+export function initElapsedTime(){document.querySelectorAll('[data-elapsed-start]').forEach((el)=>{const start=Date.parse(el.dataset.elapsedStart);if(Number.isNaN(start))return;const render=()=>{const hours=Math.max(0,Date.now()-start)/36e5;el.textContent=`Elapsed: ${hours.toFixed(1)} hours`;};render();setInterval(render,60000);});}
