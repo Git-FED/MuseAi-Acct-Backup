@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "status",
+    "description",
+    "source_url",
+    "last_verified"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "documented",
+        "user-reported",
+        "unknown"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "last_verified": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

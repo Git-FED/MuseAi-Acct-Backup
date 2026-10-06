@@ -1,0 +1,1 @@
+export function initSearch(){const input=document.querySelector('[data-search]');if(!input)return;input.addEventListener('input',()=>{const q=input.value.toLowerCase();document.querySelectorAll('[data-searchable]').forEach((el)=>{el.hidden=q&&!el.textContent.toLowerCase().includes(q);});});}

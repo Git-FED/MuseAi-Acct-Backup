@@ -1,0 +1,4 @@
+const checks=[...document.querySelectorAll('[data-layer]')];
+const bar=document.querySelector('#coverage-bar');const label=document.querySelector('#coverage-label');const percent=document.querySelector('#coverage-percent');const note=document.querySelector('#coverage-note');
+function updateCoverage(){const done=checks.filter(x=>x.checked).length;const pct=Math.round(done/3*100);if(bar)bar.style.width=`${pct}%`;if(label)label.textContent=`${done} of 3 layers mapped`;if(percent)percent.textContent=`${pct}%`;if(note)note.textContent=done===3?'Orbit stable: all three continuity layers are documented. This is still not a security certification.':`${3-done} layer${3-done===1?'':'s'} to map. Keep actual secrets in a separate encrypted vault.`;}
+checks.forEach(check=>check.addEventListener('change',updateCoverage));updateCoverage();

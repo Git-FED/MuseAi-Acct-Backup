@@ -1,0 +1,9 @@
+[
+  {
+    "id": "metadata-only",
+    "title": "Metadata-only worksheet review",
+    "observation": "The site contains no credential-entry fields and labels its local worksheet as metadata-only.",
+    "limitations": "A static-site inspection cannot prove that a provider or agent is safe to hold credentials.",
+    "status": "observation"
+  }
+]
